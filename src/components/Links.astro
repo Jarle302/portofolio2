@@ -1,0 +1,44 @@
+---
+import "../styles/global.css";
+---
+
+<ul class="flex">
+  <a class="link--1" href="">About</a>
+  <a class="link--2" href="">Contacts</a>
+  <a class="link--3" href="">See Projects</a>
+</ul>
+
+<style>
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 25px;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 20px;
+    margin: 0;
+  }
+  .link--1 {
+    background-color: var(--shade--two);
+    color: var(--shade--four);
+    width: 100px;
+  }
+  .link--2 {
+    background-color: var(--shade--three);
+    color: var(--shade--four);
+    width: 150px;
+    border: solid var(--shade--four) 1px;
+  }
+  .link--3 {
+    width: 200px;
+    background-color: var(--shade--four);
+    color: var(--shade--two);
+  }
+</style>

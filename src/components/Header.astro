@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+---
+
+<header>
+  <nav>
+    <p>J</p>
+    <ul class="flex">
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Contacts</a></li>
+      <li><a href="">Projects</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  p {
+    font-size: 25px;
+    margin: 5px;
+    font-weight: 900;
+    color: var(--shade--four);
+  }
+
+  header {
+    background: var(--shade--three);
+    margin: 0;
+    width: 100%;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+  ul a {
+    color: var(--shade--one);
+    text-decoration: none;
+  }
+</style>
