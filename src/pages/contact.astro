@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Links from "../components/Links.astro";
+---
+
+<Layout title="Contact">
+  <h1>Contact</h1>
+  <form class="flex" action="">
+    <label for="Email">Email</label>
+    <input name="email" id="email" type="text" />
+    <label for="email">Message</label>
+    <textarea name="message" id="message"></textarea>
+    <button>Send Message</button>
+  </form>
+</Layout>
+
+<style>
+  button {
+    background-color: var(--shade--four);
+    color: var(--shade--two);
+    border: none;
+    padding: 15px 20px;
+    margin-top: 20px;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  form {
+    max-width: 300px;
+  }
+
+  textarea {
+    height: 250px;
+    background-color: var(--shade--one);
+  }
+</style>

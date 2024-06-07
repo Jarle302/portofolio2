@@ -1,0 +1,161 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Links from "../components/Links.astro";
+---
+
+<Layout title="Home">
+  <main class="flex--container">
+    <div class="flex">
+      <h1 class="index__header--h1">About</h1>
+      <div class="image--container">
+        <img src="/public/profile.jpg" alt="Profile picture" />
+      </div>
+    </div>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Hi there! I'm Jarle Tollaksen, a 34-year-old teacher passionate about
+        both front-end and back-end development. My curiosity and love for
+        problem-solving have driven me to pursue a career in coding, the fact
+        that each project presents new challenges, makes the work feel
+        challenging and rewarding, and there's nothing like the moment when
+        everything clicks into place.
+      </p>
+      <blockquote>
+        "there's nothing like the moment when everything clicks into place."
+      </blockquote>
+    </section>
+    <section>
+      <h2>Professional Background</h2>
+      <h3>Education</h3>
+      <p>
+        I've spent the last two years studying front-end development at Noroff
+        and will be graduating this month. I've developed skills in various
+        technologies.
+      </p>
+      <h3>Skills</h3>
+      <ul>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Tailwind</li>
+        <li>Prisma</li>
+        <li>Zod</li>
+        <li>C#</li>
+        <li>ASP.NET Core</li>
+      </ul>
+    </section>
+    <section>
+      <h2>From teaching to tech</h2>
+      <p>
+        In my teaching career, I've always let my knowledge of how the brain
+        works guide me. Cognitive load theory, in particular, has been
+        invaluable. I believe that great software should aim to reduce the
+        user's cognitive load, either by abstracting away complexity or by
+        providing a good user experience.
+      </p>
+    </section>
+    <section>
+      <h2>Life Outside of code</h2>
+      <h3>Family</h3>
+      <p>
+        When I'm not coding, I love spending time with my wife and four kids.
+      </p>
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Cooking</li>
+        <li>Reading</li>
+        <li>Weight lifting</li>
+      </ul>
+    </section>
+  </main>
+  <Links />
+
+  <style>
+    blockquote {
+      font-weight: 900;
+      font-size: 50px;
+      color: var(--shade--four);
+    }
+
+    li {
+      font-weight: bold;
+      color: var(--shade--five);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    section h2,
+    h3 {
+      color: var(--shade--four);
+    }
+
+    section p {
+      max-width: 600px;
+      color: var(--shade--two);
+    }
+
+    .flex {
+      gap: 20px;
+      display: flex;
+      align-items: center;
+      width: 50%;
+      margin: auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .image--container {
+      width: 400px;
+      height: 400px;
+    }
+
+    .flex--container {
+      display: flex;
+      flex-direction: column;
+      max-width: 1300px;
+      margin: auto;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    .self-end {
+      align-self: flex-end;
+    }
+
+    .span--semi-bold {
+      font-weight: 500;
+      margin: 0;
+    }
+
+    @media screen and (max-width: 722px) {
+      .p--light {
+        font-size: 32px;
+      }
+    }
+    @media screen and (max-width: 822px) {
+      h1 {
+        font-size: 70px;
+      }
+      .p--light {
+        font-size: 40px;
+        width: 454px;
+      }
+    }
+    @media screen and (min-width: 823px) {
+      h1 {
+        font-size: 75px;
+        width: 900px;
+      }
+      .p--light {
+        font-size: 57px;
+        width: 639px;
+      }
+    }
+  </style>
+</Layout>
