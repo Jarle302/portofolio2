@@ -2,44 +2,28 @@
 import "../styles/global.css";
 ---
 
-<header>
-  <nav>
-    <p>J</p>
-    <ul class="flex">
+<header class="fixed w-full bg-white ">
+  <nav class="flex justify-between items-center">
+    <p class="font-bold text-indigo-900 text-5xl p-4">J</p>
+    <ul
+      class="top-[60px] p-8 w-full sm:p-0 bg-white absolute sm:static flex hidden sm:flex sm:flex-row flex-col gap-4 hamburger--menu">
       <li><a href="/">Home</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/contact">Contact</a></li>
       <li><a href="/projects">Projects</a></li>
     </ul>
+    <button class="sm:hidden hamburger--button"
+      ><i class="fa-solid fa-bars text-2xl" title="Toggle hamburger menu"
+      ></i></button
+    >
   </nav>
 </header>
 
-<style>
-  p {
-    font-size: 25px;
-    margin: 5px;
-    font-weight: 900;
-    color: var(--shade--four);
-  }
-
-  header {
-    background: var(--shade--three);
-    margin: 0;
-    width: 100%;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-  }
-  ul a {
-    color: var(--shade--one);
-    text-decoration: none;
-  }
-</style>
+<script>
+  const menu = document.querySelector(".hamburger--menu");
+  document
+    .querySelector(".hamburger--button")
+    ?.addEventListener("click", () => {
+      menu?.classList.toggle("hidden");
+    });
+</script>

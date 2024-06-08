@@ -1,161 +1,100 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Links from "../components/Links.astro";
 ---
 
-<Layout title="Home">
-  <main class="flex--container">
-    <div class="flex">
-      <h1 class="index__header--h1">About</h1>
-      <div class="image--container">
-        <img src="/public/profile.jpg" alt="Profile picture" />
+<Layout title="About">
+  <main
+    class="bg-indigo-50 py-[160px] gap-[40px] w-full h-full flex flex-col items-center flex-1">
+    <div class="flex items-center gap-4">
+      <h1 class="text-5xl sm:text-6xl max-w-[500px]">About</h1>
+      <div class="w-[200px] rounded-lg p-8">
+        <img
+          class="object-contain rounded-lg border border-indigo-900"
+          src="/public/profile.jpg"
+          alt="Profile picture"
+        />
       </div>
     </div>
     <section>
-      <h2>About Me</h2>
-      <p>
-        Hi there! I'm Jarle Tollaksen, a 34-year-old teacher passionate about
-        both front-end and back-end development. My curiosity and love for
-        problem-solving have driven me to pursue a career in coding, the fact
-        that each project presents new challenges, makes the work feel
-        challenging and rewarding, and there's nothing like the moment when
-        everything clicks into place.
-      </p>
-      <blockquote>
-        "there's nothing like the moment when everything clicks into place."
-      </blockquote>
+      <h2 class="text-4xl">Jarle Tollaksen</h2>
+      <div class="flex flex-wrap gap-2 max-w-[400px]">
+        <span class="bg-slate-400 text-indigo-50 font-bold p-1 rounded-lg"
+          >34 Years</span
+        >
+        <span class="bg-slate-500 text-indigo-50 font-bold p-1 rounded-lg"
+          >Teacher</span
+        >
+        <span class="bg-slate-600 text-indigo-50 font-bold p-1 rounded-lg"
+          >Curious</span
+        >
+        <span class="bg-slate-700 text-indigo-50 font-bold p-1 rounded-lg"
+          >Problem-Solver</span
+        >
+        <span class="bg-slate-800 text-indigo-50 font-bold p-1 rounded-lg"
+          >Coding Enthusiast</span
+        >
+      </div>
     </section>
+
     <section>
-      <h2>Professional Background</h2>
-      <h3>Education</h3>
-      <p>
-        I've spent the last two years studying front-end development at Noroff
-        and will be graduating this month. I've developed skills in various
-        technologies.
-      </p>
-      <h3>Skills</h3>
-      <ul>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Tailwind</li>
-        <li>Prisma</li>
-        <li>Zod</li>
-        <li>C#</li>
-        <li>ASP.NET Core</li>
-      </ul>
+      <h2 class="text-4xl">Knows</h2>
+      <div class="flex flex-wrap gap-2 max-w-[400px]">
+        <span class="bg-zinc-400 text-indigo-50 font-bold p-1 rounded-lg"
+          >Front-End Development</span
+        >
+        <span class="bg-zinc-500 text-indigo-50 font-bold p-1 rounded-lg"
+          >JavaScript</span
+        >
+        <span class="bg-zinc-600 text-indigo-50 font-bold p-1 rounded-lg"
+          >HTML</span
+        >
+        <span class="bg-zinc-700 text-indigo-50 font-bold p-1 rounded-lg"
+          >CSS</span
+        >
+        <span class="bg-zinc-800 text-indigo-50 font-bold p-1 rounded-lg"
+          >Tailwind</span
+        >
+
+        <span class="bg-zinc-900 text-indigo-50 font-bold p-1 rounded-lg"
+          >React</span
+        >
+        <span class="bg-zinc-900 text-indigo-50 font-bold p-1 rounded-lg"
+          >Next.js</span
+        >
+        <span class="bg-zinc-900 text-indigo-50 font-bold p-1 rounded-lg"
+          >Prisma</span
+        >
+        <span class="bg-zinc-100 text-indigo-50 font-bold p-1 rounded-lg"
+          >Zod</span
+        >
+      </div>
     </section>
+
     <section>
-      <h2>From teaching to tech</h2>
-      <p>
-        In my teaching career, I've always let my knowledge of how the brain
-        works guide me. Cognitive load theory, in particular, has been
-        invaluable. I believe that great software should aim to reduce the
-        user's cognitive load, either by abstracting away complexity or by
-        providing a good user experience.
-      </p>
+      <h2 class="text-4xl">Currently Learning</h2>
+      <div class="flex flex-wrap gap-2 max-w-[400px]">
+        <span class="bg-gray-500 text-indigo-50 font-bold p-1 rounded-lg"
+          >Back-End Development</span
+        >
+        <span class="bg-gray-600 text-indigo-50 font-bold p-1 rounded-lg"
+          >C#</span
+        >
+        <span class="bg-gray-700 text-indigo-50 font-bold p-1 rounded-lg"
+          >ASP.NET Core</span
+        >
+        <span class="bg-gray-800 text-indigo-50 font-bold p-1 rounded-lg"
+          >Data structures & algorithms</span
+        >
+
+        <span class="bg-gray-900 text-indigo-50 font-bold p-1 rounded-lg"
+          >RESTful APIs</span
+        >
+      </div>
     </section>
-    <section>
-      <h2>Life Outside of code</h2>
-      <h3>Family</h3>
-      <p>
-        When I'm not coding, I love spending time with my wife and four kids.
-      </p>
-      <h3>Hobbies</h3>
-      <ul>
-        <li>Cooking</li>
-        <li>Reading</li>
-        <li>Weight lifting</li>
-      </ul>
-    </section>
+    <a
+      class="p-3 bg-indigo-900 text-indigo-50 font-bold rounded-lg"
+      href="contact"
+      >Contact me
+    </a>
   </main>
-  <Links />
-
-  <style>
-    blockquote {
-      font-weight: 900;
-      font-size: 50px;
-      color: var(--shade--four);
-    }
-
-    li {
-      font-weight: bold;
-      color: var(--shade--five);
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    section h2,
-    h3 {
-      color: var(--shade--four);
-    }
-
-    section p {
-      max-width: 600px;
-      color: var(--shade--two);
-    }
-
-    .flex {
-      gap: 20px;
-      display: flex;
-      align-items: center;
-      width: 50%;
-      margin: auto;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-    .image--container {
-      width: 400px;
-      height: 400px;
-    }
-
-    .flex--container {
-      display: flex;
-      flex-direction: column;
-      max-width: 1300px;
-      margin: auto;
-      padding: 20px;
-      justify-content: center;
-    }
-
-    .self-end {
-      align-self: flex-end;
-    }
-
-    .span--semi-bold {
-      font-weight: 500;
-      margin: 0;
-    }
-
-    @media screen and (max-width: 722px) {
-      .p--light {
-        font-size: 32px;
-      }
-    }
-    @media screen and (max-width: 822px) {
-      h1 {
-        font-size: 70px;
-      }
-      .p--light {
-        font-size: 40px;
-        width: 454px;
-      }
-    }
-    @media screen and (min-width: 823px) {
-      h1 {
-        font-size: 75px;
-        width: 900px;
-      }
-      .p--light {
-        font-size: 57px;
-        width: 639px;
-      }
-    }
-  </style>
 </Layout>

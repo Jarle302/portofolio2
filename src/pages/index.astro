@@ -4,73 +4,45 @@ import Links from "../components/Links.astro";
 ---
 
 <Layout title="Home">
-  <main class="flex--container">
-    <h1 class="index__header--h1">Designing with Purpose</h1>
-    <span class="spann--semi-bold"></span>
-    <p class="p--light self-end">
-      Focused on <span class="span--semi-bold">simplicity</span>
-      and <span class="span--semi-bold"> functionality </span>
-      to solve <span class="span--semi-bold"> real problems.</span>
-    </p>
+  <main
+    class="bg-indigo-50 w-full h-full flex items-center justify-evenly flex-1">
+    <div class="flex flex-col gap-[20px]">
+      <div>
+        Jarle Tollaksen <span class="font-bold"> Developer </span>
+        <h1 class="text-5xl sm:text-6xl max-w-[500px]">
+          Developing with <span class="text-indigo-900">Purpose </span>
+        </h1>
+      </div>
+
+      <p>
+        <p class="text-3xl sm:text-4xl max-w-[500px]">
+          Focused on <span class="font-bold">simplicity</span>
+          and <span class="font-bold"> functionality </span>
+          to solve <span class="font-bold"> real problems.</span>
+        </p>
+        <div
+        class="sm:hidden w-[250px]  rounded-sm border border-indigo-900 border-2">
+        <img
+          class="object-contain w-full h-full"
+          src="/public/profile.jpg"
+          alt=""
+        />
+      </div>
+        <a
+          class="font-bold p-3 bg-slate-900 text-green-50 text-center w-[280px] rounded-md"
+          href="/projects">View Projects</a
+        >
+      </p>
+    </div>
+    <div
+      class="hidden sm:block w-[300px] rounded-sm border border-indigo-900 border-2">
+      <img
+        class="object-contain w-full h-full"
+        src="/public/profile.jpg"
+        alt=""
+      />
+    </div>
   </main>
-  <Links />
 </Layout>
 
-<style>
-  .flex--container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1300px;
-    margin: auto;
-  }
-
-  .self-end {
-    align-self: flex-end;
-  }
-
-  .span--semi-bold {
-    font-weight: 500;
-    margin: 0;
-  }
-
-  .p--light {
-    font-weight: 200;
-    margin: none;
-    font-size: 63px;
-    width: 400px;
-    margin: 0 0 50px 0;
-    color: var(--shade--five);
-  }
-
-  @media screen and (max-width: 722px) {
-    .p--light {
-      font-size: 32px;
-    }
-  }
-  @media screen and (max-width: 822px) {
-    h1 {
-      font-size: 70px;
-    }
-    .p--light {
-      font-size: 40px;
-      width: 454px;
-    }
-  }
-  @media screen and (min-width: 823px) {
-    h1 {
-      font-size: 75px;
-      width: 507px;
-    }
-    .p--light {
-      font-size: 41px;
-      width: 462px;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .p--light {
-      font-size: 29px;
-      width: 341px;
-    }
-  }
-</style>
+<style></style>

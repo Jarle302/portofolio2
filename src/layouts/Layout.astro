@@ -16,11 +16,16 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <script
+      src="https://kit.fontawesome.com/92a83e3665.js"
+      crossorigin="anonymous"></script>
     <title>{title}</title>
   </head>
-  <Header />
-  <body>
-    <slot />
+  <body class="p-0 m-0 min-h-[100vh]">
+    <div class="max-w-[1350px] m-auto min-h-[100vh] flex flex-col">
+      <Header />
+      <slot />
+    </div>
   </body>
 
   <style></style>

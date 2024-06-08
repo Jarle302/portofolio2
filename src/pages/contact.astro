@@ -4,35 +4,18 @@ import Links from "../components/Links.astro";
 ---
 
 <Layout title="Contact">
-  <h1>Contact</h1>
-  <form class="flex" action="">
-    <label for="Email">Email</label>
-    <input name="email" id="email" type="text" />
-    <label for="email">Message</label>
-    <textarea name="message" id="message"></textarea>
-    <button>Send Message</button>
-  </form>
+  <main class="bg-indigo-50 h-full">
+    <h1 class="text-5xl sm:text-6xl max-w-[500px]">Contact</h1>
+    <form class="flex flex-col items-center bg-indigo-50" action="">
+      <label for="Email">Email</label>
+      <input class="" name="email" id="email" type="text" />
+      <label for="email">Message</label>
+      <textarea name="message" id="message"></textarea>
+      <button class="p-3 bg-indigo-900 text-indigo-50 w-[250px] rounded-md"
+        >Send Message</button
+      >
+    </form>
+  </main>
 </Layout>
 
-<style>
-  button {
-    background-color: var(--shade--four);
-    color: var(--shade--two);
-    border: none;
-    padding: 15px 20px;
-    margin-top: 20px;
-  }
-
-  .flex {
-    display: flex;
-    flex-direction: column;
-  }
-  form {
-    max-width: 300px;
-  }
-
-  textarea {
-    height: 250px;
-    background-color: var(--shade--one);
-  }
-</style>
+<style></style>
