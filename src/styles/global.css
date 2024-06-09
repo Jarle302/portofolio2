@@ -17,4 +17,5 @@ h3 {
 
 main {
   padding-block: 120px;
+  flex: 1;
 }
