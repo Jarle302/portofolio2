@@ -3,14 +3,14 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout path="/contact" title="Contact">
-  <main class="bg-indigo-50 h-full" id="top">
+  <main class="bg-indigo-50 h-full flex flex-col items-center gap-8" id="top">
     <h1 class="text-5xl sm:text-6xl max-w-[500px]">Contact</h1>
-    <form class="flex flex-col items-center bg-indigo-50" action="">
+    <form class="flex flex-col bg-indigo-50" action="">
       <label for="Email">Email</label>
       <input class="" name="email" id="email" type="text" />
       <label for="email">Message</label>
-      <textarea name="message" id="message"></textarea>
-      <button class="p-3 bg-indigo-900 text-indigo-50 w-[250px] rounded-md"
+      <textarea class="h-[200px]" name="message" id="message"></textarea>
+      <button class="p-3 bg-indigo-900 text-indigo-50 rounded-md"
         >Send Message</button
       >
     </form>
