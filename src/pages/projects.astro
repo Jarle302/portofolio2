@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+type project = {
+  title: string;
+  description: string;
+  imgSrc: string;
+  githubLink: string;
+  liveLink: string;
+};
+const projects: project[] = [
+  {
+    title: "Holidaze",
+    description: "Test",
+    imgSrc: "/holidaze.jpg",
+    liveLink: "https://holidazejarle.netlify.app/",
+    githubLink: "https://github.com/Jarle302/holidaze",
+  },
+  {
+    title: "Silk 'n Sound",
+    description: "ecom",
+    imgSrc: "/silknsound.jpg",
+    liveLink: "https://silkandsound.netlify.app/",
+    githubLink: "https://github.com/Jarle302/js-frameworks-ca",
+  },
+  {
+    title: "Collective Chest",
+    description: "Test",
+    imgSrc: "/collectivechest.jpg",
+    liveLink: "https://papaya-swan-bab731.netlify.app/",
+    githubLink: "https://github.com/Jarle302/sp2Next",
+  },
+];
+---
+
+<Layout path="/projects" title="Projects">
+  <main>
+    <h1>Projects</h1>
+    <div class="flex flex-col gap-14">
+      {projects.map((project) => <ProjectCard {...project} />)}
+    </div>
+  </main>
+</Layout>

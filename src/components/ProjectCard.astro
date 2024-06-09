@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  imgSrc: string;
+  githubLink: string;
+  liveLink: string;
+}
+const { title, description, imgSrc, githubLink, liveLink } = Astro.props;
+---
+
+<div>
+  <h2 class="text-4xl sm:text-5xl max-w-[500px]">{title}</h2>
+  <img src={imgSrc} alt="Screenshot of live project" />
+  <p>{description}</p>
+  <div class="flex w-[200px] gap-2">
+    <a
+      class="font-bold p-1 bg-slate-900 text-green-50 text-center flex-1 rounded-md text-center"
+      href={githubLink}>GitHub</a
+    >
+    <a
+      class="p-1 bg-indigo-900 text-indigo-50 font-bold rounded-md flex-1 text-center"
+      href={liveLink}>Live</a
+    >
+  </div>
+</div>
