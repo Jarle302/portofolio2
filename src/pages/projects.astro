@@ -12,7 +12,12 @@ type project = {
 const projects: project[] = [
   {
     title: "Holidaze",
-    description: "Test",
+    description: `Holidaze is a comprehensive web application designed for seamless venue booking and management. It provides an intuitive interface for users to explore, book, and manage venues effortlessly.
+Browse and Search Venues: Easily find the perfect venue with detailed listings and search functionality.
+User Registration: Customers and venue managers can register using their stud.noroff.no email.
+Bookings Management: Customers can book venues and view upcoming reservations.
+Venue Management: Venue managers can create, update, and delete venues, and manage bookings.
+User Account Control: Users can log in, update their profile, and manage their accounts.`,
     imgSrc: "/holidaze.jpg",
     liveLink: "https://holidazejarle.netlify.app/",
     githubLink: "https://github.com/Jarle302/holidaze",
@@ -37,7 +42,7 @@ const projects: project[] = [
 <Layout path="/projects" title="Projects">
   <main>
     <h1>Projects</h1>
-    <div class="flex flex-col gap-14">
+    <div class="flex flex-col gap-14 items-center">
       {projects.map((project) => <ProjectCard {...project} />)}
     </div>
   </main>
