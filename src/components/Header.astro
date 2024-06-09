@@ -1,22 +1,42 @@
 ---
 import "../styles/global.css";
 
-interface Props{
-  path:string
+interface Props {
+  path: string;
 }
 
 const { path } = Astro.props;
 ---
 
 <header class="fixed w-full bg-white">
-  <nav class="flex justify-between items-center w-full">
+  <nav class="flex justify-between items-center w-full px-4">
     <p class="self-start font-bold text-indigo-900 text-5xl p-4">J</p>
     <ul
       class="top-[60px] p-8 w-full sm:w-auto sm:p-0 bg-white absolute sm:static flex hidden sm:flex sm:flex-row flex-col gap-4 hamburger--menu">
-      <li class={path === "/" ? "bg-indigo-900 text-white font-bold rounded-lg p-1" : "p-1"}><a href="/">Home</a></li>
-      <li class={path === "/about" ? "bg-indigo-900 text-white font-bold rounded-lg p-1" : "p-1"} ><a href="/about">About</a></li>
-      <li class={path === "/contact" ? "bg-indigo-900 text-white font-bold rounded-lg p-1" : "p-1"}><a href="/contact">Contact</a></li>
-      <li class={path === "/projects" ? "bg-indigo-900 text-white font-bold rounded-lg p-1" : "p-1"}><a href="/projects">Projects</a></li>
+      <li
+        class={path === "/"
+          ? "bg-indigo-900 text-white font-bold rounded-lg p-1"
+          : "p-1"}>
+        <a href="/">Home</a>
+      </li>
+      <li
+        class={path === "/about"
+          ? "bg-indigo-900 text-white font-bold rounded-lg p-1"
+          : "p-1"}>
+        <a href="/about">About</a>
+      </li>
+      <li
+        class={path === "/contact"
+          ? "bg-indigo-900 text-white font-bold rounded-lg p-1"
+          : "p-1"}>
+        <a href="/contact">Contact</a>
+      </li>
+      <li
+        class={path === "/projects"
+          ? "bg-indigo-900 text-white font-bold rounded-lg p-1"
+          : "p-1"}>
+        <a href="/projects">Projects</a>
+      </li>
     </ul>
     <button class="sm:hidden hamburger--button"
       ><i class="fa-solid fa-bars text-2xl" title="Toggle hamburger menu"
