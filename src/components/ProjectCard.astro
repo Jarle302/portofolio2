@@ -14,7 +14,7 @@ const { title, description, imgSrc, githubLink, liveLink } = Astro.props;
   <div class="max-w-[600px]">
     <img class="w-full h-full" src={imgSrc} alt="Screenshot of live project" />
   </div>
-  <p>{description}</p>
+  <p class="max-w-[600px]">{description}</p>
   <div class="flex w-[200px] gap-2">
     <a
       class="font-bold p-1 bg-slate-900 text-green-50 text-center flex-1 rounded-md text-center"
